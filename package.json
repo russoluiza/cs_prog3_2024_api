@@ -1,7 +1,7 @@
 {
-  "name": "node_cs_api_lpbd_20212",
+  "name": "cs_PROG3_2024_api",
   "version": "1.0.0",
-  "description": "projeto para a disciplina de lpbd 2021 2",
+  "description": "projeto para a disciplina de programação III",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

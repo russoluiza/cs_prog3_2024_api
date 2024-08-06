@@ -28,6 +28,10 @@ sw.get('/', (req, res) => {  //http://localhost:4000
     res.send('Hello, world! meu primeiro teste.  #####');
 })
 
+sw.get('/teste', (req, res) => {
+    res.status(201).send('meu teste');
+})
+
 sw.get('/listendereco', function (req, res, next) {
 
     postgres.connect(function (err, client, done) {
@@ -38,7 +42,7 @@ sw.get('/listendereco', function (req, res, next) {
             res.status(400).send('{' + err + '}'); //400: erro interno
         } else {
 
-            var q = 'select *from tb_endereco';
+            var q = 'select codigo , complemento, cep, nicknamejogador' + 'from tb_endereco order by codigo asc';
 
             client.query(q, function (err, result) { //o q pode dar erro ou resultado
                 done(); // fecha a conexão;
